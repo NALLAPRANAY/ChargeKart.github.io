@@ -68,6 +68,7 @@ function uploading(){
 }).catch(error=>{
     console.error(error);
 });
+    console.log(btn_val);
  if(btn_val==1){
  
     sendmail(details);
@@ -83,7 +84,7 @@ function sendmail(details){
         emailjs
         .send(serviceID,templateID,details)
         .then((res)=>{console.log(res)
-        alert("Message sent")})
+        })
         .catch(err=>console.log(err))
     
     }
